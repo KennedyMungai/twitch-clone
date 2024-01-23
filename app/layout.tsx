@@ -19,11 +19,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<ClerkProvider appearance={{ baseTheme: dark }}>
-			<ThemeProvider>
-				<html lang='en'>
-					<body className={inter.className}>{children}</body>
-				</html>
-			</ThemeProvider>
+			<html lang='en'>
+				<body className={inter.className}>
+					<ThemeProvider>{children}</ThemeProvider>
+				</body>
+			</html>
 		</ClerkProvider>
 	)
 }
