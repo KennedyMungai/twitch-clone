@@ -1,3 +1,4 @@
+import ThemeToggle from '@/components/ThemeToggle/ThemeToggle'
 import { UserButton } from '@clerk/nextjs'
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
 			<div className='flex flex-col gap-y-4'>
 				<h1>Dashboard</h1>
 				<UserButton afterSignOutUrl='/' />
+        <ThemeToggle />
 			</div>
 		</main>
 	)
