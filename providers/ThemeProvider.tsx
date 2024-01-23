@@ -14,7 +14,7 @@ const ThemeProvider = ({ children }: Props) => {
 			defaultTheme='system'
 			enableSystem
 		>
-			ThemeProvider
+			{children}
 		</NextThemesProvider>
 	)
 }
