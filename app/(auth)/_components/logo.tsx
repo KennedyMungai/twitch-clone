@@ -10,8 +10,8 @@ const Logo = (props: Props) => {
 				<Image
 					src='/logos/twitch_clone_logo.png'
 					alt='Twitch clone logo'
-					height={80}
-					width={80}
+					height={60}
+					width={60}
 				/>
 			</div>
 		</div>
