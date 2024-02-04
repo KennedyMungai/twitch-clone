@@ -9,10 +9,15 @@ const Logo = () => {
 					<Image
 						src='/logos/twitch_clone_logo.png'
 						alt='Twitch Clone Logo'
-						alt='logo'
 						width={60}
 						height={60}
 					/>
+				</div>
+				<div>
+					<p className='text-lg font-semibold'>Twitch Clone</p>
+					<p className='text-xs text-muted-foreground'>
+						Let&apos;s Play
+					</p>
 				</div>
 			</div>
 		</Link>
