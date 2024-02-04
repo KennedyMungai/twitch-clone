@@ -50,7 +50,7 @@ export const POST = async (req: Request) => {
             data: {
                 externalUserId: payload.data.id,
                 username: payload.data.username,
-                image: payload.data.image,
+                image: payload.data.image_url,
             }
         })
     }
