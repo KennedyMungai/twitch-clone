@@ -13,6 +13,7 @@ const ThemeProvider = ({ children }: Props) => {
 			attribute='class'
 			defaultTheme='system'
 			enableSystem
+			storageKey='twitch-clone'
 		>
 			{children}
 		</NextThemesProvider>
