@@ -9,6 +9,8 @@
 			"lucide",
 			"nextjs",
 			"trpc"
-		]
+		],
+		"WillLuke.nextjs.addTypesOnSave": true,
+		"WillLuke.nextjs.hasPrompted": true
 	}
 }
