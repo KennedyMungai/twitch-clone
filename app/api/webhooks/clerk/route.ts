@@ -50,7 +50,7 @@ export const POST = async (req: Request) => {
 			data: {
 				externalUserId: payload.data.id,
 				username: payload.data.username,
-				imageUrl: payload.data.image_url
+				image: payload.data.image_url
 			}
 		})
 	}
@@ -72,7 +72,7 @@ export const POST = async (req: Request) => {
 			},
 			data: {
 				username: payload.data.username,
-				imageUrl: payload.data.image_url
+				image: payload.data.image_url
 			}
 		})
 	}
