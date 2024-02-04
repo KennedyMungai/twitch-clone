@@ -1,20 +1,21 @@
 import Image from 'next/image'
-import React from 'react'
+import Link from 'next/link'
 
-type Props = {}
-
-const Logo = (props: Props) => {
+const Logo = () => {
 	return (
-		<div className='flex flex-col items-center gap-4'>
-			<div className='bg-[#252731] rounded-full p-1'>
-				<Image
-					src='/logos/twitch_clone_logo.png'
-					alt='Twitch clone logo'
-					height={60}
-					width={60}
-				/>
+		<Link href='/'>
+			<div className='hidden lg:flex items-center gap-x-4 hover:opacity-75 transition duration-300 ease-out'>
+				<div className='bg-transparent rounded-full p-1'>
+					<Image
+						src='/logos/twitch_clone_logo.png'
+						alt='Twitch Clone Logo'
+						alt='logo'
+						width={60}
+						height={60}
+					/>
+				</div>
 			</div>
-		</div>
+		</Link>
 	)
 }
 
