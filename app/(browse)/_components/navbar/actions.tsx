@@ -19,13 +19,16 @@ const Actions = async () => {
 						size='sm'
 						variant={'ghost'}
 						className='text-muted-foreground hover:text-primary'
+						asChild
 					>
 						<Link
 							href={`/u/${user.username}`}
 							className='flex flex-col items-center justify-center'
 						>
 							<Clapperboard />
-							<span>Dashboard</span>
+							<span className='hidden lg:block text-sm'>
+								Dashboard
+							</span>
 						</Link>
 					</Button>
 				</div>
