@@ -1,5 +1,4 @@
-import Logo from '@/app/(auth)/_components/logo'
-import React from 'react'
+import Logo from "../logo"
 
 type Props = {}
 
