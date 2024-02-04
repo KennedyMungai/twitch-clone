@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { SearchIcon } from 'lucide-react'
+import { SearchIcon, X } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import qs from 'query-string'
 import { FormEvent, useState } from 'react'
@@ -27,6 +27,8 @@ const Search = () => {
 		router.push(url)
 	}
 
+	const onClear = () => setValue('')
+
 	return (
 		<form
 			className='relative w-full lg:w-[400px] flex items-center'
@@ -38,6 +40,12 @@ const Search = () => {
 				onChange={(e) => setValue(e.target.value)}
 				className='rounded-r-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0'
 			/>
+			{value && (
+				<X
+					onClick={onClear}
+					className='absolute top-2.5 right-14 h-5 w-5 text-muted-foreground cursor-pointer hover:opacity-75 transition duration-300 ease-out'
+				/>
+			)}
 			<Button
 				type='submit'
 				variant={'secondary'}
