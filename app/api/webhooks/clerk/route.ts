@@ -1,3 +1,4 @@
+import { db } from '@/lib/db'
 import { WebhookEvent } from '@clerk/nextjs/server'
 import { headers } from "next/headers"
 import { Webhook } from "svix"
@@ -41,11 +42,18 @@ export const POST = async (req: Request) => {
         })
     }
 
-    // const { id } = evt.data
     const eventType = evt.type
 
-    console.log(`Webhook with a type of ${eventType}`)
-    // console.log('Webhook body: ', body)
+    if(eventType === 'user.created')
+    {
+        await db.user.create({
+            data: {
+                externalUserId: payload.data.id,
+                username: payload.data.username,
+                image: payload.data.image,
+            }
+        })
+    }
 
     return new Response('', { status: 200 })
 }
