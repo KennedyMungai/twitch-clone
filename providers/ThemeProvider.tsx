@@ -11,8 +11,8 @@ const ThemeProvider = ({ children }: Props) => {
 	return (
 		<NextThemesProvider
 			attribute='class'
-			defaultTheme='system'
-			enableSystem
+			defaultTheme='dark'
+			forcedTheme='dark'
 			storageKey='twitch-clone'
 		>
 			{children}
