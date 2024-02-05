@@ -5,7 +5,7 @@ type Props = {
 }
 
 const Wrapper = ({ children }: Props) => {
-	return <aside>{children}</aside>
+	return <aside className='fixed top-20 left-0 flex flex-col w-60 h-full bg-background'>{children}</aside>
 }
 
 export default Wrapper
