@@ -3,8 +3,8 @@ import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from '@clerk/themes'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
-import SideBar from './(browse)/_components/navbar/sidebar'
 import './globals.css'
+import SideBar from './(browse)/_components/sidebar'
 
 const poppins = Poppins({
 	subsets: ['latin'],
