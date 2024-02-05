@@ -1,9 +1,14 @@
+import Toggle from './toggle'
 import Wrapper from './wrapper'
 
 type Props = {}
 
 const SideBar = (props: Props) => {
-	return <Wrapper>SideBar</Wrapper>
+	return (
+		<Wrapper>
+			<Toggle />
+		</Wrapper>
+	)
 }
 
 export default SideBar
