@@ -9,7 +9,8 @@
 			"lucide",
 			"nextjs",
 			"svix",
-			"trpc"
+			"trpc",
+			"zustand"
 		],
 		"WillLuke.nextjs.addTypesOnSave": true,
 		"WillLuke.nextjs.hasPrompted": true
