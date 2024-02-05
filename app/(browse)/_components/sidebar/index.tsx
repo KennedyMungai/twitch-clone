@@ -1,7 +1,9 @@
+import Wrapper from './wrapper'
+
 type Props = {}
 
 const SideBar = (props: Props) => {
-	return <div>SideBar</div>
+	return <Wrapper>SideBar</Wrapper>
 }
 
 export default SideBar
