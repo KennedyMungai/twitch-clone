@@ -5,7 +5,7 @@ const Logo = () => {
 	return (
 		<Link href='/'>
 			<div className='flex items-center gap-x-4 hover:opacity-75 transition duration-300 ease-out'>
-				<div className='bg-transparent rounded-full p-1 mr-12 lg:mr-0'>
+				<div className='bg-transparent rounded-full p-1 mr-5 lg:mr-0 lg:shrink'>
 					<Image
 						src='/logos/twitch_clone_logo.png'
 						alt='Twitch Clone Logo'
