@@ -37,7 +37,6 @@ const Actions = async () => {
 					<UserButton afterSignOutUrl='/' />
 				</div>
 			)}
-			<ThemeToggle />
 		</div>
 	)
 }
