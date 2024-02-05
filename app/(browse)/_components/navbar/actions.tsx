@@ -1,3 +1,4 @@
+import ThemeToggle from '@/components/ThemeToggle/ThemeToggle'
 import { Button } from '@/components/ui/button'
 import { SignInButton, UserButton, currentUser } from '@clerk/nextjs'
 import { Clapperboard } from 'lucide-react'
@@ -34,6 +35,7 @@ const Actions = async () => {
 					<UserButton afterSignOutUrl='/' />
 				</div>
 			)}
+			<ThemeToggle />
 		</div>
 	)
 }
