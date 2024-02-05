@@ -1,5 +1,3 @@
-import ThemeToggle from '@/components/ThemeToggle/ThemeToggle'
-
 export default function Home() {
 	return (
 		<main className='min-h-screen'>
