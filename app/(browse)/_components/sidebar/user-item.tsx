@@ -43,7 +43,6 @@ const UserItem = ({ userName, imageUrl, isLive }: Props) => {
 						imageUrl={imageUrl}
 						userName={userName}
 						isLive={isLive}
-                        showBadge
 					/>
 				</div>
 			</Link>
