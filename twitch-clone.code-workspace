@@ -10,6 +10,7 @@
 			"nextjs",
 			"svix",
 			"trpc",
+			"usehooks",
 			"zustand"
 		],
 		"WillLuke.nextjs.addTypesOnSave": true,
