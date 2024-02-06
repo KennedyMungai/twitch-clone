@@ -39,6 +39,11 @@ const UserAvatar = ({ imageUrl, userName, isLive, showBadge, size }: Props) => {
 					{userName[userName.length - 1]}
 				</AvatarFallback>
 			</Avatar>
+			{canShowBadge && (
+				<div className='absolute -bottom-3 left-1/2 transform -translate-x-1/2'>
+					Live
+				</div>
+			)}
 		</div>
 	)
 }
