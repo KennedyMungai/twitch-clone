@@ -19,7 +19,7 @@ const Recommended = ({ data }: Props) => {
 			)}
 			<ul className='space-y-2 px-2'>
 				{data.map((user, index) => (
-					<div key={index}>{user.username}</div>
+					<UserItem />
 				))}
 			</ul>
 		</div>
