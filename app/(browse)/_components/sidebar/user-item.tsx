@@ -7,7 +7,7 @@ type Props = {
 }
 
 const UserItem = ({ user }: Props) => {
-	return <div>UserItem</div>
+	return <div>{user.username}</div>
 }
 
 export default UserItem
