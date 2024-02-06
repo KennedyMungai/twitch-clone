@@ -1,8 +1,8 @@
 import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger
 } from '@/components/ui/tooltip'
 import { ReactNode } from 'react'
 
@@ -24,7 +24,7 @@ const Hint = ({ label, children, asChild, side, align }: Props) => {
 					side={side}
 					align={align}
 				>
-					<p>{label}</p>
+					<p className='font-semibold'>{label}</p>
 				</TooltipContent>
 			</Tooltip>
 		</TooltipProvider>
