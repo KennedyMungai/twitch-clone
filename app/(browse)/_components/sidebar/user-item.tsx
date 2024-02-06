@@ -1,5 +1,6 @@
 'use client'
 
+import LiveBadge from '@/components/live-badge'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import UserAvatar from '@/components/user-avatar'
@@ -45,6 +46,7 @@ const UserItem = ({ userName, imageUrl, isLive }: Props) => {
 						isLive={isLive}
 					/>
 					{!collapsed && <p className='truncate'>{userName}</p>}
+					{!collapsed && isLive && <LiveBadge />}
 				</div>
 			</Link>
 		</Button>
