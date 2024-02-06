@@ -14,7 +14,7 @@ const Toggle = () => {
 		<>
 			{collapsed && (
 				<div className='hidden lg:flex w-full items-center justify-center pt-4 mb-4'>
-					<Hint label={label} asChild>
+					<Hint label={label} asChild side='right'>
 						<Button
 							variant={'ghost'}
 							onClick={onExpand}
@@ -29,7 +29,7 @@ const Toggle = () => {
 			{!collapsed && (
 				<div className='p-3 pl-6 mb-2 flex items-center w-full'>
 					<p className='font-semibold text-primary'>For You</p>
-					<Hint label={label} asChild>
+					<Hint label={label} asChild side='left'>
 						<Button
 							className='h-auto p-2 ml-auto'
 							variant={'ghost'}
