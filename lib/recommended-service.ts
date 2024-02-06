@@ -1,4 +1,3 @@
-import { getSelf } from './auth-service'
 import { db } from './db'
 
 export const getRecommended = async () => {
