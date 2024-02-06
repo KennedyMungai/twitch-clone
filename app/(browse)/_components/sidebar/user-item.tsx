@@ -3,7 +3,7 @@
 type Props = {
 	userName: string
 	imageUrl: string
-	isLive: boolean
+	isLive?: boolean
 }
 
 const UserItem = ({ userName, imageUrl, isLive }: Props) => {
