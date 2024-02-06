@@ -1,10 +1,10 @@
 import { cn } from '@/lib/utils'
 import { cva, type VariantProps } from 'class-variance-authority'
-import { Skeleton } from './ui/skeleton'
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 import LiveBadge from './live-badge'
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
+import { Skeleton } from './ui/skeleton'
 
-const avatarSizes = cva('', {
+const AvatarSizes = cva('', {
 	variants: {
 		size: {
 			default: 'h-8 w-8',
@@ -16,7 +16,7 @@ const avatarSizes = cva('', {
 	}
 })
 
-interface Props extends VariantProps<typeof avatarSizes> {
+interface Props extends VariantProps<typeof AvatarSizes> {
 	imageUrl: string
 	userName: string
 	isLive?: boolean
@@ -31,7 +31,7 @@ const UserAvatar = ({ imageUrl, userName, isLive, showBadge, size }: Props) => {
 			<Avatar
 				className={cn(
 					isLive && 'ring-2 ring-rose-500 border border-background',
-					avatarSizes({ size })
+					AvatarSizes({ size })
 				)}
 			>
 				<AvatarImage src={imageUrl} className='object-cover' />
@@ -50,3 +50,13 @@ const UserAvatar = ({ imageUrl, userName, isLive, showBadge, size }: Props) => {
 }
 
 export default UserAvatar
+
+interface userAvatarSkeletonProps extends VariantProps<typeof AvatarSizes> {}
+
+export const UserAvatarSkeleton = ({ size }: userAvatarSkeletonProps) => {
+	return (
+		<Skeleton
+			className={cn('rounded-full', AvatarSizes({ size }))}
+		></Skeleton>
+	)
+}
