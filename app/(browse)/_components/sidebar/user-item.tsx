@@ -1,13 +1,13 @@
 'use client'
 
-import { User } from '@prisma/client'
-
 type Props = {
-	user: User
+	userName: string
+	imageUrl: string
+	isLive: boolean
 }
 
-const UserItem = ({ user }: Props) => {
-	return <div>{user.username}</div>
+const UserItem = ({ userName, imageUrl, isLive }: Props) => {
+	return <div>{userName}</div>
 }
 
 export default UserItem
