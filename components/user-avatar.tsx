@@ -22,8 +22,20 @@ interface Props extends VariantProps<typeof avatarSizes> {
 	showBadge?: boolean
 }
 
-const UserAvatar = ({ imageUrl, userName, isLive, showBadge }: Props) => {
-	return <div>UserAvatar</div>
+const UserAvatar = ({ imageUrl, userName, isLive, showBadge, size }: Props) => {
+	const canShowBadge = showBadge && isLive
+
+	return (
+		<div className='relative'>
+			<Avatar
+				className={cn(
+					isLive && 'ring-2 ring-rose-500 border border-background'
+				)}
+			>
+				<AvatarImage src={imageUrl} className='object-cover' />
+			</Avatar>
+		</div>
+	)
 }
 
 export default UserAvatar
