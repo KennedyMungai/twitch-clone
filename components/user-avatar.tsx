@@ -34,6 +34,10 @@ const UserAvatar = ({ imageUrl, userName, isLive, showBadge, size }: Props) => {
 				)}
 			>
 				<AvatarImage src={imageUrl} className='object-cover' />
+				<AvatarFallback>
+					{userName[0]}
+					{userName[userName.length - 1]}
+				</AvatarFallback>
 			</Avatar>
 		</div>
 	)
