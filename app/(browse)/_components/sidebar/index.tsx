@@ -1,5 +1,5 @@
 import { getRecommended } from '@/lib/recommended-service'
-import Recommended from './recommended'
+import Recommended, { RecommendedSkeleton } from './recommended'
 import Toggle from './toggle'
 import Wrapper from './wrapper'
 
@@ -9,7 +9,7 @@ const SideBar = async () => {
 	return (
 		<Wrapper>
 			<Toggle />
-			<div className="space-y-4 pt-4 lg:pt-0">
+			<div className='space-y-4 pt-4 lg:pt-0'>
 				<Recommended data={recommended} />
 			</div>
 		</Wrapper>
@@ -17,3 +17,11 @@ const SideBar = async () => {
 }
 
 export default SideBar
+
+export const SideBarSkeleton = () => {
+	return (
+		<aside className='fixed left-0 flex flex-col w-[70px] lg:w-60 h-full bg-background border-r border-[#2D2E35] z-50'>
+			<RecommendedSkeleton />
+		</aside>
+	)
+}
