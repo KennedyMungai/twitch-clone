@@ -4,7 +4,6 @@ import { dark } from '@clerk/themes'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
-import SideBar from './(browse)/_components/sidebar'
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -26,7 +25,6 @@ export default function RootLayout({
 			<html lang='en'>
 				<body className={poppins.className}>
 					<ThemeProvider>
-						<SideBar />
 						{children}
 					</ThemeProvider>
 				</body>
