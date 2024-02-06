@@ -11,8 +11,10 @@ const BrowseLayout = ({ children }: Props) => {
 	return (
 		<>
 			<NavBar />
-			<SideBar />
-			<Container>{children}</Container>
+			<div className='flex h-full pt-20'>
+				<SideBar />
+				<Container>{children}</Container>
+			</div>
 		</>
 	)
 }
