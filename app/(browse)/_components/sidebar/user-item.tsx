@@ -44,6 +44,7 @@ const UserItem = ({ userName, imageUrl, isLive }: Props) => {
 						userName={userName}
 						isLive={isLive}
 					/>
+					{!collapsed && <p className='truncate'>{userName}</p>}
 				</div>
 			</Link>
 		</Button>
