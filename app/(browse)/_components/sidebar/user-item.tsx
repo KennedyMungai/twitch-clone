@@ -46,7 +46,7 @@ const UserItem = ({ userName, imageUrl, isLive }: Props) => {
 						isLive={isLive}
 					/>
 					{!collapsed && <p className='truncate'>{userName}</p>}
-					{!collapsed && isLive && <LiveBadge />}
+					{!collapsed && isLive && <LiveBadge className='ml-auto' />}
 				</div>
 			</Link>
 		</Button>
