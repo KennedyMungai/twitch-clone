@@ -46,6 +46,7 @@ const Toggle = () => {
 									className='h-auto p-2 ml-auto'
 									variant={'ghost'}
 									onClick={onCollapse}
+                                    size={'icon'}
 								>
 									<ArrowLeftFromLine className='h-4 w-4' />
 								</Button>
