@@ -4,7 +4,7 @@ import Wrapper from './wrapper'
 
 type Props = {}
 
-const SideBar = (props: Props) => {
+const SideBar = async (props: Props) => {
 	return (
 		<Wrapper>
 			<Toggle />
