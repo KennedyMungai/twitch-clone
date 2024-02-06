@@ -1,6 +1,7 @@
 'use client'
 import { useSideBar } from '@/store/use-sidebar'
 import { User } from '@prisma/client'
+import UserItem from './user-item'
 
 type Props = {
 	data: User[]
