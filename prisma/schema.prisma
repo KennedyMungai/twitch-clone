@@ -18,7 +18,8 @@ model User {
   externalUserId String  @unique
   bio            String? @db.Text
 
-  following Follow[] @relation("Following")
+  following  Follow[] @relation("Following")
+  followedBy Follow[] @relation("FollowedBy")
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -29,7 +30,9 @@ model Follow {
   followerId  String
   followingId String
 
-  follower User @relation(name: "Following", fields: [followerId], references: [id], onDelete: Cascade)
+  follower  User @relation(name: "Following", fields: [followerId], references: [id], onDelete: Cascade)
+  following User @relation(name: "FollowedBy", fields: [followingId], references: [id], onDelete: Cascade)
 
   @@index([followerId])
+  @@index([followingId])
 }
