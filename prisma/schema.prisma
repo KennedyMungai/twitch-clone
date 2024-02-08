@@ -14,10 +14,22 @@ datasource db {
 model User {
   id             String  @id @default(uuid())
   username       String  @unique
-  image       String  @db.Text
+  image          String  @db.Text
   externalUserId String  @unique
   bio            String? @db.Text
 
+  following Follow[] @relation("Following")
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Follow {
+  id          String @id @default(uuid())
+  followerId  String
+  followingId String
+
+  follower User @relation(name: "Following", fields: [followerId], references: [id], onDelete: Cascade)
+
+  @@index([followerId])
 }
