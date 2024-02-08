@@ -1,6 +1,10 @@
-type Props = {}
+type Props = {
+	params: {
+		username: string
+	}
+}
 
-const UserPage = (props: Props) => {
+const UserPage = ({ params: { username } }: Props) => {
 	return <div>UserPage</div>
 }
 
