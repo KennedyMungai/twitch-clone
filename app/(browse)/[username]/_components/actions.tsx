@@ -2,12 +2,15 @@
 
 import { onFollow } from '@/actions/follow'
 import { Button } from '@/components/ui/button'
+import { useTransition } from 'react'
 
-type Props = {}
+const Actions = () => {
+	const [isPending, startTransition] = useTransition()
 
-const Actions = (props: Props) => {
 	const onClick = () => {
-		onFollow('123')
+		startTransition(() => {
+			onFollow('123')
+		})
 	}
 
 	return (
