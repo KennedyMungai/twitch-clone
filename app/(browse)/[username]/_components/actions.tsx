@@ -14,7 +14,7 @@ const Actions = () => {
 	}
 
 	return (
-		<Button variant={'primary'} onClick={onClick}>
+		<Button variant={'primary'} onClick={onClick} disabled={isPending}>
 			Follow
 		</Button>
 	)
