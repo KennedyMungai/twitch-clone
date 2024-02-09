@@ -7,9 +7,10 @@ import { toast } from 'sonner'
 
 type Props = {
 	isFollowing: boolean
+	userId: string
 }
 
-const Actions = ({ isFollowing }: Props) => {
+const Actions = ({ isFollowing, userId }: Props) => {
 	const [isPending, startTransition] = useTransition()
 
 	const onClick = () => {
