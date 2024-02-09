@@ -10,7 +10,11 @@ const Actions = (props: Props) => {
 		onFollow('123')
 	}
 
-	return <Button variant={'primary'}>Follow</Button>
+	return (
+		<Button variant={'primary'} onClick={onClick}>
+			Follow
+		</Button>
+	)
 }
 
 export default Actions
