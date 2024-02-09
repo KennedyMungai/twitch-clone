@@ -14,7 +14,8 @@ const UserPage = async ({ params: { username } }: Props) => {
 
 	return (
 		<div className='flex flex-col gap-y-4'>
-			<p>User: {user.username}</p>
+			<p>username: {user.username}</p>
+			<p>User ID: {user.id}</p>
 		</div>
 	)
 }
