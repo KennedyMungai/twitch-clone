@@ -19,7 +19,7 @@ const UserPage = async ({ params: { username } }: Props) => {
 		<div className='flex flex-col gap-y-4'>
 			<p>username: {user.username}</p>
 			<p>User ID: {user.id}</p>
-			<p>isFollowing: {isFollowing}</p>
+			<p>isFollowing: {`${isFollowing}`}</p>
 		</div>
 	)
 }
