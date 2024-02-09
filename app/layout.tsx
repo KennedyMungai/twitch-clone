@@ -3,8 +3,8 @@ import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from '@clerk/themes'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import { Toaster } from 'sonner'
 import './globals.css'
-import {Toaster} from 'sonner'
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -26,9 +26,7 @@ export default function RootLayout({
 			<html lang='en' suppressHydrationWarning>
 				<body className={poppins.className}>
 					<Toaster />
-					<ThemeProvider>
-						{children}
-					</ThemeProvider>
+					<ThemeProvider>{children}</ThemeProvider>
 				</body>
 			</html>
 		</ClerkProvider>
