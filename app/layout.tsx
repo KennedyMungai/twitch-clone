@@ -25,8 +25,10 @@ export default function RootLayout({
 		<ClerkProvider appearance={{ baseTheme: dark }}>
 			<html lang='en' suppressHydrationWarning>
 				<body className={poppins.className}>
-					<Toaster />
-					<ThemeProvider>{children}</ThemeProvider>
+					<ThemeProvider>
+						<Toaster />
+						{children}
+					</ThemeProvider>
 				</body>
 			</html>
 		</ClerkProvider>
