@@ -12,7 +12,11 @@ const UserPage = async ({ params: { username } }: Props) => {
 
 	if (!user) notFound()
 
-	return <div>User: {user.username}</div>
+	return (
+		<div className='flex flex-col gap-y-4'>
+			<p>User: {user.username}</p>
+		</div>
+	)
 }
 
 export default UserPage
