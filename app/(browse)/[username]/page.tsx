@@ -12,7 +12,7 @@ const UserPage = async ({ params: { username } }: Props) => {
 
 	if (!user) notFound()
 
-	return <div>UserPage</div>
+	return <div>User: {user.username}</div>
 }
 
 export default UserPage
