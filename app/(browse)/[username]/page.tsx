@@ -21,7 +21,7 @@ const UserPage = async ({ params: { username } }: Props) => {
 			<p>username: {user.username}</p>
 			<p>User ID: {user.id}</p>
 			<p>isFollowing: {`${isFollowing}`}</p>
-			<Actions />
+			<Actions isFollowing={isFollowing} />
 		</div>
 	)
 }

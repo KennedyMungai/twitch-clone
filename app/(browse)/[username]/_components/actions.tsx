@@ -4,7 +4,11 @@ import { onFollow } from '@/actions/follow'
 import { Button } from '@/components/ui/button'
 import { useTransition } from 'react'
 
-const Actions = () => {
+type Props = {
+	isFollowing: boolean
+}
+
+const Actions = ({ isFollowing }: Props) => {
 	const [isPending, startTransition] = useTransition()
 
 	const onClick = () => {
@@ -14,7 +18,11 @@ const Actions = () => {
 	}
 
 	return (
-		<Button variant={'primary'} onClick={onClick} disabled={isPending}>
+		<Button
+			variant={'primary'}
+			onClick={onClick}
+			disabled={isPending || isFollowing}
+		>
 			Follow
 		</Button>
 	)
