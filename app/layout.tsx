@@ -4,6 +4,7 @@ import { dark } from '@clerk/themes'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
+import {Toaster} from 'sonner'
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function RootLayout({
 		<ClerkProvider appearance={{ baseTheme: dark }}>
 			<html lang='en' suppressHydrationWarning>
 				<body className={poppins.className}>
+					<Toaster />
 					<ThemeProvider>
 						{children}
 					</ThemeProvider>
