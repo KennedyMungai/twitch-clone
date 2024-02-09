@@ -3,6 +3,7 @@
 import { onFollow } from '@/actions/follow'
 import { Button } from '@/components/ui/button'
 import { useTransition } from 'react'
+import { toast } from 'sonner'
 
 type Props = {
 	isFollowing: boolean
@@ -13,7 +14,7 @@ const Actions = ({ isFollowing }: Props) => {
 
 	const onClick = () => {
 		startTransition(() => {
-			onFollow('123')
+			onFollow('123').then(() => toast.success('Followed the user'))
 		})
 	}
 
