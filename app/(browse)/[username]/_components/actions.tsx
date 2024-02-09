@@ -15,7 +15,7 @@ const Actions = ({ isFollowing, userId }: Props) => {
 
 	const onClick = () => {
 		startTransition(() => {
-			onFollow('123')
+			onFollow(userId)
 				.then(() => toast.success('Followed the user'))
 				.catch(() => toast.error('Something Went Wrong'))
 		})
