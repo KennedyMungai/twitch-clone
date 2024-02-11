@@ -2,7 +2,7 @@
 
 import { useSideBar } from '@/store/use-sidebar'
 import { Follow, User } from '@prisma/client'
-import UserItem from './user-item'
+import UserItem, { UserItemSkeleton } from './user-item'
 
 type Props = {
 	data: (Follow & { following: User })[]
@@ -36,3 +36,13 @@ const Following = ({ data }: Props) => {
 }
 
 export default Following
+
+export const FollowingSkeleton = () => {
+	return (
+		<ul className='px-2 pt-2 lg:pt-0'>
+			{[...Array(3)].map((_, i) => (
+				<UserItemSkeleton key={i} />
+			))}
+		</ul>
+	)
+}
