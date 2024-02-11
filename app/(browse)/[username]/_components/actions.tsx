@@ -13,7 +13,7 @@ type Props = {
 const Actions = ({ isFollowing, userId }: Props) => {
 	const [isPending, startTransition] = useTransition()
 
-	const onClick = () => {
+	const handleFollow = () => {
 		startTransition(() => {
 			onFollow(userId)
 				.then((data) =>
@@ -26,7 +26,7 @@ const Actions = ({ isFollowing, userId }: Props) => {
 	}
 
 	return (
-		<Button variant={'primary'} onClick={onClick} disabled={isPending}>
+		<Button variant={'primary'} onClick={handleFollow} disabled={isPending}>
 			{isFollowing ? 'Unfollow' : 'Follow'}
 		</Button>
 	)
