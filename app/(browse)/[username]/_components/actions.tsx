@@ -30,7 +30,7 @@ const Actions = ({ isFollowing, userId }: Props) => {
 			onUnFollow(userId)
 				.then((data) =>
 					toast.success(
-						`You are now following ${data.following.username}`
+						`You have unfollowed ${data.following.username}`
 					)
 				)
 				.catch(() => toast.error('Something Went Wrong'))
