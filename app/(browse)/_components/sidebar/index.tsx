@@ -1,9 +1,9 @@
+import { getFollowedUsers } from '@/lib/follow-service'
 import { getRecommended } from '@/lib/recommended-service'
+import Following, { FollowingSkeleton } from './following'
 import Recommended, { RecommendedSkeleton } from './recommended'
 import Toggle from './toggle'
 import Wrapper from './wrapper'
-import { getFollowedUsers } from '@/lib/follow-service'
-import Following from './following'
 
 const SideBar = async () => {
 	const recommended = await getRecommended()
@@ -25,6 +25,7 @@ export default SideBar
 export const SideBarSkeleton = () => {
 	return (
 		<aside className='fixed left-0 flex flex-col w-[70px] lg:w-60 h-full bg-background border-r border-[#2D2E35] z-50'>
+			<FollowingSkeleton />
 			<RecommendedSkeleton />
 		</aside>
 	)
