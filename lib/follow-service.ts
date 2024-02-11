@@ -66,7 +66,7 @@ export const followUser = async (id: string) => {
 	return follow
 }
 
-export const unFollowUser = async (id: string) => {
+export const unfollowUser = async (id: string) => {
 	const self = await getSelf()
 
 	const otherUser = await db.user.findUnique({
