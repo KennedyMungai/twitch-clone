@@ -28,6 +28,7 @@ const Following = ({ data }: Props) => {
 						key={index}
 						userName={follow.following.username}
 						imageUrl={follow.following.imageUrl}
+                        isLive={false}
 					/>
 				))}
 			</ul>
