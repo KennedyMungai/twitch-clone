@@ -42,9 +42,12 @@ const Actions = ({ isFollowing, userId }: Props) => {
 	}
 
 	return (
-		<Button variant={'primary'} onClick={onClick} disabled={isPending}>
-			{isFollowing ? 'Unfollow' : 'Follow'}
-		</Button>
+		<>
+			<Button variant={'primary'} onClick={onClick} disabled={isPending}>
+				{isFollowing ? 'Unfollow' : 'Follow'}
+			</Button>
+			<Button>Block</Button>
+		</>
 	)
 }
 
