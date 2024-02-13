@@ -4,19 +4,15 @@ import { blockUser, unblockUser } from '@/lib/block-service'
 import { revalidatePath } from 'next/cache'
 
 export const onBlock = async (id: string) => {
-	try {
-		const blockedUser = await blockUser(id)
+	const blockedUser = await blockUser(id)
 
-		revalidatePath('/')
+	revalidatePath('/')
 
-		if (blockedUser) {
-			revalidatePath(`${blockedUser.blocking.username}`)
-		}
-
-		return blockUser
-	} catch (error) {
-		console.log(error)
+	if (blockedUser) {
+		revalidatePath(`${blockedUser.blocking.username}`)
 	}
+
+	return blockUser
 }
 
 export const onUnblock = async (id: string) => {
