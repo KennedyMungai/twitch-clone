@@ -5,7 +5,6 @@ import { onFollow, onUnFollow } from '@/actions/follow'
 import { Button } from '@/components/ui/button'
 import { useTransition } from 'react'
 import { toast } from 'sonner'
-import { blockUser } from '../../../../lib/block-service'
 
 type Props = {
 	isFollowing: boolean
