@@ -1,6 +1,7 @@
 import { getSelfByUsername } from '@/lib/auth-service'
 import { redirect } from 'next/navigation'
 import { ReactNode } from 'react'
+import CreatorSideBar from './_components/sidebar'
 
 type Props = {
 	params: {
@@ -18,7 +19,10 @@ const CreatorLayout = async ({ params: { username }, children }: Props) => {
 
 	return (
 		<>
-			<div className='flex h-full pt-20'>{children}</div>
+			<div className='flex h-full pt-20'>
+                <CreatorSideBar />
+                {children}
+            </div>
 		</>
 	)
 }
