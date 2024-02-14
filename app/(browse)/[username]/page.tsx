@@ -18,6 +18,10 @@ const UserPage = async ({ params: { username } }: Props) => {
 	const isFollowing = await isFollowingUser(user.id)
 	const isBlocked = await isBlockedByUser(user.id)
 
+	if (isBlocked) {
+		notFound()
+	}
+
 	return (
 		<div className='flex flex-col gap-y-4'>
 			<p>username: {user.username}</p>
