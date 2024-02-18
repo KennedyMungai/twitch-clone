@@ -1,11 +1,9 @@
-import React from 'react'
+import Wrapper from '@/app/(browse)/_components/sidebar/wrapper'
 
 type Props = {}
 
 const CreatorSideBar = (props: Props) => {
-  return (
-    <div>CreatorSideBar</div>
-  )
+	return <Wrapper>CreatorSideBar</Wrapper>
 }
 
 export default CreatorSideBar
